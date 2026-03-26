@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Turma do 3 ano A</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Alunos</h1>
+
+    <div class="grid-container">
+
+        <div class="card">
+            <img src="https://media-gru1-2.cdn.whatsapp.net/v/t61.24694-24/637865978_2027818037782567_2417381187785125938_n.jpg?ccb=11-4&oh=01_Q5Aa4AHCRfv9O0gQ9jJcNtIx4x43CKrN8fgkJ0AMjCkqua3GAw&oe=69CAD44C&_nc_sid=5e03e0&_nc_cat=105" alt="foto">
+            <h3>Mateus</h3>
+            <p>Gosto de doce de leite</p>
+        </div>
+
+        <div class="card">
+            <img src="https://png.pngtree.com/png-clipart/20230511/ourmid/pngtree-isolated-cat-on-white-background-png-image_7094927.png" alt="foto">
+            <h3>Gato</h3>
+            <p>Arranhar o sofá</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
