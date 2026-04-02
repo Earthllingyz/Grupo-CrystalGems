@@ -1,113 +1,283 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Crystal Gems</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .card {
-          width: 200px;
-          padding: 20px;
-          background: rgb(217, 35, 199);
-          cursor: pointer;
-          border-radius: 10px;
-          text-align: center;
-        }
-        
-        .modal {
-          display: none;
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba(0,0,0,0.6);
-        }
-        
-        .modal-content {
-          background: rgb(73, 106, 215);
-          margin: 15% auto;
-          padding: 20px;
-          width: 300px;
-          border-radius: 10px;
-        }
-        
-        .fechar {
-          float: right;
-          cursor: pointer;
-        }
+<meta charset="UTF-8">
+<title>Crystal Gems</title>
 
-        .texto {
-          background-color: rgb(70, 75, 227);
-          padding: 15px;
-          border-radius: 10px;
-          width: 80%;
-          margin: auto;
-        }
-    </style>
+<style>
+body {
+    font-family: Arial;
+}
+
+.container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    width: 200px;
+    padding: 15px;
+    background: rgb(241, 114, 229);
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background: rgb(73, 106, 215);
+    margin: 5% auto;
+    padding: 20px;
+    width: 350px;
+    border-radius: 10px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.fechar {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.texto {
+    background-color: rgb(70, 75, 227);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+</style>
 </head>
 
 <body>
 
 <h1>Crystal Gems</h1>
 
-<div class="Card" onclick="abrirModal('modal')">
+<div class="container-cards">
+
+<div class="card" onclick="abrirModal('modal')">
 <h3>Rose Quartz</h3>
-<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/..." alt="foto">
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..." alt="foto">
 <p>Líder das Crystal Gems</p>
 </div>
 
-<div id="modal" class="modal">
-<div class="modal-conteudo">
-<span class="fechar" onclick="fecharModal('modal')">&times;</span>
-<div class="texto">
-<h2>Rose Quartz</h2>
-<p>Uma das personagens mais complexas da obra, nascida de origem desconhecida há mais de 2.000 anos. Diamante Rosa surgiu junto de suas irmãs diamantes, sendo uma das líderes da autoridade diamante, porém considerada infantil por suas irmãs. Enquanto suas irmãs lideravam sua raça e conquistavam planetas como suas colônias, Rosa apenas observava e implorava às suas irmãs para que pudesse ter uma também, mas sempre negavam. Então deram um jardim para ela com uma Spinela para brincar com ela, para que Rosa se distraísse. Mesmo com uma amiga nova, ela ainda insistia por sua colônia, até que um dia suas irmãs finalmente cederam e concederam à Rosa uma colônia, o planeta Terra. Animada por sua nova colônia, assistiu com sua Pérola a uma transmissão do Jardim de Infância da Terra para ver as primeiras gems nascerem. Chateada por não poder recebê-las, sua Pérola sugeriu que ela fosse disfarçada para a Terra. Logo, se transformou em Rose Quartz. Ao explorar o planeta, Rose se apaixonou pela beleza natural da Terra, mas percebeu que as gems não estavam nascendo do nada, mas sim roubando a vida do planeta. Tentou convencer suas irmãs a parar a colonização, mas foi ignorada. Então iniciou uma rebelião sendo a líder das Crystal Gems, que lutavam pela liberdade da Terra.</p>
-</div>
-</div>
-</div>
-
-<div class="Card" onclick="abrirModal('modal1')">
+<div class="card" onclick="abrirModal('modal1')">
 <h3>Pérola</h3>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5i0rE_EplfwHjjnUYcfmUuB3889UU35IbLA&s" alt="foto">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5i0rE_EplfwHjjnUYcfmUuB3889UU35IbLA&s">
 <p>A Pérola sem dona</p>
 </div>
 
-<div id="modal1" class="modal">
-<div class="modal-conteudo">
-<span class="fechar" onclick="fecharModal('modal1')">&times;</span>
-<div class="texto">
-<h2>Pérola</h2>
-<p>Designada como Pérola da Diamante Rosa, ela serviu, admirou e amou sua diamante mesmo quando livre. Foi a primeira Crystal Gem junto de Rose Quartz, ajudando na rebelião e no falso estilhaçamento da Diamante Rosa, no qual se transformou em Rose Quartz para realizá-lo. Pouco antes disso, recebeu sua última ordem: nunca contar a verdade.</p>
-</div>
-</div>
-</div>
-
-<div class="Card" onclick="abrirModal('modal2')">
+<div class="card" onclick="abrirModal('modal2')">
 <h3>Garnet</h3>
-<img src="https://i.redd.it/what-do-u-think-a-convo-between-our-garnet-and-single-gem-v0-q9v4v4mx2y4c1.jpg" alt="foto">
+<img src="https://i.redd.it/what-do-u-think-a-convo-between-our-garnet-and-single-gem-v0-q9v4v4mx2y4c1.jpg">
 <p>Feita de amor</p>
 </div>
 
-<div id="modal2" class="modal">
-<div class="modal-conteudo">
-<span class="fechar" onclick="fecharModal('modal2')">&times;</span>
-<div class="texto">
-<h2>Garnet</h2>
-<p>Fusão ilegal fruto do amor entre uma Rubi e uma Safira. Garnet é uma das primeiras Crystal Gems.</p>
+<div class="card" onclick="abrirModal('modal3')">
+<h3>Bismuto</h3>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTseWCS1cdCh0t-prYO6J2m5jA-hgWV2ozmbQ&s">
+<p>Forjadora da rebelião</p>
 </div>
+
+<div class="card" onclick="abrirModal('modal4')">
+<h3>Ametista</h3>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqY8_TXV_ZMXfasjKFWblLhne4ugWR6oB6Gw&s">
+<p>Bate o chicote</p>
 </div>
+
+<div class="card" onclick="abrirModal('modal5')">
+<h3>Leão</h3>
+<img src="https://m.media-amazon.com/images/M/MV5BOWUwNDI2YmUtYzM0ZC00YjEzLWIwMmMtNDIyNGNmNWZhNTJlXkEyXkFqcGc@._V1_.jpg">
+<p>Leão</p>
 </div>
+
+<div class="card" onclick="abrirModal('modal6')">
+<h3>Steven</h3>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmSuUzjB2_33kk0n1ttyaS_i3Ie1YnfBxmNg&s">
+<p>O meio humano</p>
+</div>
+
+<div class="card" onclick="abrirModal('modal7')">
+<h3>Connie</h3>
+<img src="https://thegeekiary.com/wp-content/uploads/2017/02/Steven_Universe_Episode_121-Still.jpg">
+<p>A humana</p>
+</div>
+
+<div class="card" onclick="abrirModal('modal8')">
+<h3>Peridot</h3>
+<img src="https://analysisismagic.wordpress.com/wp-content/uploads/2016/08/peridot-title.png">
+<p>A tonta traidora</p>
+</div>
+
+<div class="card" onclick="abrirModal('modal9')">
+<h3>Lapis Lazuli</h3>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuT98138HvqxXiirPrGJpG4n4pZNd4CDN03A&s">
+<p>Mais que um espelho</p>
+</div>
+
+<div class="card" onclick="abrirModal('modal10')">
+<h3>Spinela</h3>
+<img src="https://i.redd.it/ive-always-wondered-something-about-spinel-v0-sfi9bb8borhg1.jpg">
+<p>O brinquedo descartado</p>
+</div>
+
+</div>
+
+<!-- ROSE -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+  <span class="fechar" onclick="fecharModal('modal')">&times;</span>
+  <div class="texto">
+  <h2>Rose Quartz</h2>
+  <p>
+  Uma das personagens mais complexas da obra, nascida de origem desconhecida há mais de 2.000 anos.Diamante Rosa surgiu junto de suas irmãs diamantes, sendo uma das líderes da autoridade diamante, porém, considerada infantil por suas irmãs. Enquanto suas irmãs lideravam sua raça e conquistavam planetas como suas colônias, Rosa apenas observava e implorava suas irmãs para que pudesse ter uma também, mas sempre negavam, então deram um jardim para ela com uma spinela para brincar com ela para que a Rosa de destraísse. Mesmo com uma amiga nova, ela ainda insistia por sua colônia, até que um dia, suas irmãs finalmente cederam, e concederam á Rosa uma colônia, o planeta Terra. Animada por sua nova colônia, assistiu com sua Pérola uma transmissão do jardim de infância da Terra para ver as primeiras gems nascerem de sua colônia. Chateada por não poder recebê-las, sua Pérola sugeriu que a mesma fosse disfarçada para a terra, então se transformou em Rose Quartz. Logo, Rose Quartz foi ao planeta ver pessoalmente o nascimente das novas gems terrestres de sua corte. Ela decidiu explorar o planeta com sua Pérola, e no processo, Rose se apaixou pela beleza natural da Terra, mas percebeu que as gems não estavam nascendo do nada, mas sim roubando a vida do planeta. Logo, a Diamante Rosa recorreu a suas irmãs implorando que parassem a colonização, que à mandaram seguir em frente após tanto insisitir, mas criaram um zoológico no espaço para salvar alguns humanos. Ela percebeu que não podia convencer suas irmãs, então, disfarçada de Rose Quartz, convenceu outras gems para se juntarem a sua causa, começando uma rebelião sendo a líder das Crystal Gems, que lutavam pela liberdade da Terra. Após anos de luta, chegou à conclusão de que a única forma de fazê-las recuarem seria fazendo-ás perder algo importante, assim, forjando sua própria estilhação falsa de Diamante Rosa. As diamantes responderam com um ataque em conjunto para obliterar as gems na terra. Rose usou seu escudo mágico, conseguindo salvar apenas si mesma e mais duas Crystal Gems, Pérola e Garnet, mas o resto das gems que não conseguiram fugir da terra, ao invés de serem obliteradas, foram corrompidas, virando monstros sem conciência. Isso marcou o fim da guerra e o início da era 2 no planeta natal, e as Crystal Gems que sobraram continuaram lutando pela terra sem o conhecimeneto do planeta natal e prendendo as gems corrompidas em bolhas para que não causem problemas até que pudessem ser curadas.
+  </p>
+  </div>
+  </div>
+  </div>
+  
+  <!-- PÉROLA -->
+  <div id="modal1" class="modal">
+  <div class="modal-content">
+  <span class="fechar" onclick="fecharModal('modal1')">&times;</span>
+  <div class="texto">
+  <h2>Pérola</h2>
+  <p>
+    Designada como pérola da Diamante Rosa, ela serviu, admirou e amou sua diamante mesmo quando livre. Ela foi a primeira Crystal Gem junto de Rose Quartz, ajudando na rebelião e no falso estilhaçamento de Diamante Rosa, em que se transformou em Rose Quartz para realizá-lo e acabar com a guerra. Pouco antes do estilhaçamento, recebeu sua última ordem da Diamante Rosa, para que nunca contasse a ninguém a veradade.
+  </div>
+  </div>
+  </div>
+  
+  <!-- GARNET -->
+  <div id="modal2" class="modal">
+  <div class="modal-content">
+  <span class="fechar" onclick="fecharModal('modal2')">&times;</span>
+  <div class="texto">
+  <h2>Garnet</h2>
+  <p>
+    Fusâo ilegal fruto do amor entre uma rubi e uma safira. Garnet é uma das primeiras Crystal Gems, que lutava para que pudesse ser ela mesma. Safira, uma gem rara designada para prever o futuro da guerra para a Diamante Azul no planeta Terra, e Rubi, localizada bem baixo na hierarquia gem, designada junto de outras rubis para proteger Safira. Como previsto por Safira, as gems rebeldes chegaram e pufaram as outras guardas rubis, e quando Safira estava prestes a ser pufada, inesperadamente, a Rubi se jogou em cima de Safira para salvá-la, acidentalmente se fundindo. As gems rebeldes se maravilharam com a possibilidade de gems diferentes se fundirem, logo cessando o ataque e fugindo. Diamante Azul logo ordena o estilhaçamento de Safira por errar sua previsão, e de Rubi por se fundir com uma gem rara de sua corte, que ao ouvirem o decreto, não tiveram outra escolha a não ser fugirem. Ao explorarem a Terra, foram se aproximando, e logo se apaixonando, até se fundirem novamente, mas dessa vez de propósito. Por acaso, elas se encontraram com as rebeldes novamentes, que ao invés de atacá-la, à encorajaram a ser ela mesma, que em resposta se junta à rebelião.
+  </p>
+  </div>
+  </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+    <span class="fechar" onclick="fecharModal('modal3')">&times;</span>
+    <div class="texto">
+    <h2>Bismuto</h2>
+    <p>Uma arquiteta gem que se juntou à rebelião como forjadora das armas das Crystal Gems. Outra das Crystal Gems originais que lutava pela causa e queria garantir a vitória das Crystal Gems na guerra, tendo a ideia de criar uma arma para estilhaçar gems para que nunca se formassem novamente, o que aumentaria as chances de vitória das rebeldes. Ao apresentar a arma para Rose Quartz, ela recusou usar a arma, pois seria uma solução radical demais e que não era certo. Mesmo assim, Bismuto insistia que fizessem o uso dessa arma na guerra, então Rose a pufou, embolhou e escondeu dentro do portal mágico na juba de seu leão sem contar para o resto das Crystal Gems.</p>
+    </div>
+    </div>
+    </div>
+
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+      <span class="fechar" onclick="fecharModal('modal4')">&times;</span>
+      <div class="texto">
+      <h2>Ametista</h2>
+      <p>Uma Ametista defeituosa que nasceu atrasada após o fim da guerra gem, porém com a habilidade de gerar um chicote, algo raro entre as ametistas. Ela foi encontrada pelas Crystal Gems e se juntou a elas ajudando a proteger a Terra.</p>
+      </div>
+      </div>
+      </div>
+
+      <div id="modal5" class="modal">
+        <div class="modal-content">
+        <span class="fechar" onclick="fecharModal('modal5')">&times;</span>
+        <div class="texto">
+        <h2>Leão</h2>
+        <p>Leão que morava no deserto e foi encontrado por Rose Quartz, que o viu morrer e usou seus poderes para revivê-lo, fazendo com que ele ficasse rosa, ganhasse poderes de criar portais e de grito sônico, além de fazer com que sua juba tivesse um portal para um lugar isolado que só existe dentro dela. Após vários anos, foi encontrado pelas Crystal Gems e adotado por Steven.</p>
+        </div>
+        </div>
+        </div>
+
+        <div id="modal6" class="modal">
+          <div class="modal-content">
+          <span class="fechar" onclick="fecharModal('modal6')">&times;</span>
+          <div class="texto">
+          <h2>Steven</h2>
+          <p>Meio humano e meio gem fruto do amor entre Rose Quartz e um humano por quem se apaixonou, que recebeu a gem de sua Rose Quartz para que pudesse sobreviver, em troca da existência de sua mãe. Foi criado por seu pai e por Pérola, Garnet e Ametista, herdando tanto os poderes de sua mãe quanto suas responsabilidades.</p>
+          </div>
+          </div>
+          </div>
+
+          <div id="modal7" class="modal">
+            <div class="modal-content">
+            <span class="fechar" onclick="fecharModal('modal7')">&times;</span>
+            <div class="texto">
+            <h2>Connie</h2>
+            <p>Humana normal, filha de pais rígidos, que acabou conhecendo Steven. Ela se fascinou pela vida mágica de Steven, decidindo treinar para se tornar uma Crystal Gem e ajudar a proteger a Terra.</p>
+            </div>
+            </div>
+            </div>
+
+            <div id="modal8" class="modal">
+              <div class="modal-content">
+              <span class="fechar" onclick="fecharModal('modal8')">&times;</span>
+              <div class="texto">
+              <h2>Peridot</h2>
+              <p>Gem nascida na era 2 gem, após o fim da guerra. Por nascer em uma época com escassez de recursos, emergiu pequena e defeituosa, tendo que usar realçadores de membros para se encaixar. Enviada numa missão à Terra para verificar o progresso de uma arma gem crescendo no núcleo do planeta Terra, que iria destruí-lo. Ao chegar ao planeta, acabou se encontrando com as Crystal Gems, que destruíram sua nave, capturaram e a embolharam. Porém, foi solta por Steven, que a convenceu a cooperar e ajudar a destruir a arma, tornando-se com o tempo uma verdadeira Crystal Gem.</p>
+              </div>
+              </div>
+              </div>
+
+              <div id="modal9" class="modal">
+                <div class="modal-content">
+                <span class="fechar" onclick="fecharModal('modal9')">&times;</span>
+                <div class="texto">
+                <h2>Lapis Lazuli</h2>
+                <p>Uma gem rara designada a terraformar planetas com sua hidrocinese. Ao fazer uma breve visita ao planeta Terra, acabou no meio da guerra gem, sendo pufada no meio da guerra e confundida com uma rebelde, sendo aprisionada em um espelho. Após anos jogada, foi encontrada por Pérola, que a guardou, e posteriormente entregue a Steven, que descobriu que Lapis estava ali e a libertou. Após recuperar seus poderes, tentou voltar ao planeta natal, mas acabou sendo capturada novamente. Ao retornar à Terra, fundiu-se com Jasper para contê-la, permanecendo presa no oceano por muito tempo. Após ser libertada, decidiu permanecer na Terra e se tornar uma Crystal Gem.</p>
+                </div>
+                </div>
+                </div>
+
+                <div id="modal10" class="modal">
+                  <div class="modal-content">
+                  <span class="fechar" onclick="fecharModal('modal10')">&times;</span>
+                  <div class="texto">
+                  <h2>Spinela</h2>
+                  <p>Gem feita para divertir seu dono, dada de presente para a Diamante Rosa por suas irmãs, para distraí-la e fazer com que parasse de insistir por uma colônia. Após Rosa finalmente receber sua colônia, ela enganou Spinela com uma brincadeira para que ela ficasse parada no jardim esperando que ela voltasse. Após vários anos, o transmissor do jardim ligou sozinho, transmitindo a mensagem do fim da soberania diamante, contando a história de Diamante Rosa e como ela abandonou tudo para dar vida ao Steven. Ao descobrir que foi abandonada todos esses anos, decidiu se vingar, indo para a Terra com um injetor cheio de veneno para matar toda a vida orgânica na Terra, e com um rejuvenescedor de gems, que usou nas Crystal Gems para fazê-las perderem suas memórias. ao enfrentar as Crystal Gems, ela consegue pufá-las e rejuvenescê-las, porém, a arma não consegue pufar o Steven por ele ser meio-humano, mas consegue rejusvenescer sua parte gem, o fazendo perder seus poderes. Logo, Steven consegue pegar a arma de Spinela, que à usa para pufar e rejuvenescer Spinela. Embora tenha parado Spinela, ele não onseguia parar seu injetor, que estava injetando veneno na Terra e à matando aos poucos. Então, Steven decide fazer Spinela recuperar suas memórias para que ela possa parar o injeto, enquanto tbm recupera a memória das Crystal Gems para ajudá-lo. Ele recupera a memória de Ametista e Pérola, que conhecia Spinela por também ter servido à Diamante Rosa. Ao ficar sozinha, Spinela começa a ficar insegura e com medo de ser abandonada,que em seguida foge para um teletransportador espacial. Ao encontrá-la, steven tenta fazer ela lembrar de seu passado, que consegue lembra do jardim onde ficou todos esses anos, logo os teletransportando para lá. Ao chegarem, Spinela começa a lembrar de seu passado e conta tudo para o Steven. Ao recobrar sua memória, Steven convênce ela que nunca irá abandoná-la novamente e que poderiam ser amigos.</p>
+                  </div>
+                  </div>
+                  </div>
+
 
 <script>
-function abrirModal(id) {
-document.getElementById(id).style.display = "block";
-}
-
-function fecharModal(id) {
-document.getElementById(id).style.display = "none";
-}
-</script>
-
-</body>
-</html>
+  function abrirModal(id) {
+      document.getElementById(id).style.display = "block";
+  }
+  
+  function fecharModal(id) {
+      document.getElementById(id).style.display = "none";
+  }
+  
+  window.onclick = function(event) {
+      let modais = document.querySelectorAll(".modal");
+      modais.forEach(function(modal) {
+          if (event.target === modal) {
+              modal.style.display = "none";
+          }
+      });
+  }
+  </script>
+  
+  </body>
+  </html>
