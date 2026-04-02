@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Crystal Gems</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .card {
+          width: 200px;
+          padding: 20px;
+          background: rgb(217, 35, 199);
+          cursor: pointer;
+          border-radius: 10px;
+          text-align: center;
+        }
+        
+        .modal {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0,0,0,0.6);
+        }
+        
+        .modal-content {
+          background: rgb(73, 106, 215);
+          margin: 15% auto;
+          padding: 20px;
+          width: 300px;
+          border-radius: 10px;
+        }
+        
+        .fechar {
+          float: right;
+          cursor: pointer;
+        }
+
+        .texto {
+          background-color: rgb(70, 75, 227);
+          padding: 15px;
+          border-radius: 10px;
+          width: 80%;
+          margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Crystal Gems</h1>
+
+<div class="Card" onclick="abrirModal('modal')">
+<h3>Rose Quartz</h3>
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/..." alt="foto">
+<p>Líder das Crystal Gems</p>
+</div>
+
+<div id="modal" class="modal">
+<div class="modal-conteudo">
+<span class="fechar" onclick="fecharModal('modal')">&times;</span>
+<div class="texto">
+<h2>Rose Quartz</h2>
+<p>Uma das personagens mais complexas da obra, nascida de origem desconhecida há mais de 2.000 anos. Diamante Rosa surgiu junto de suas irmãs diamantes, sendo uma das líderes da autoridade diamante, porém considerada infantil por suas irmãs. Enquanto suas irmãs lideravam sua raça e conquistavam planetas como suas colônias, Rosa apenas observava e implorava às suas irmãs para que pudesse ter uma também, mas sempre negavam. Então deram um jardim para ela com uma Spinela para brincar com ela, para que Rosa se distraísse. Mesmo com uma amiga nova, ela ainda insistia por sua colônia, até que um dia suas irmãs finalmente cederam e concederam à Rosa uma colônia, o planeta Terra. Animada por sua nova colônia, assistiu com sua Pérola a uma transmissão do Jardim de Infância da Terra para ver as primeiras gems nascerem. Chateada por não poder recebê-las, sua Pérola sugeriu que ela fosse disfarçada para a Terra. Logo, se transformou em Rose Quartz. Ao explorar o planeta, Rose se apaixonou pela beleza natural da Terra, mas percebeu que as gems não estavam nascendo do nada, mas sim roubando a vida do planeta. Tentou convencer suas irmãs a parar a colonização, mas foi ignorada. Então iniciou uma rebelião sendo a líder das Crystal Gems, que lutavam pela liberdade da Terra.</p>
+</div>
+</div>
+</div>
+
+<div class="Card" onclick="abrirModal('modal1')">
+<h3>Pérola</h3>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5i0rE_EplfwHjjnUYcfmUuB3889UU35IbLA&s" alt="foto">
+<p>A Pérola sem dona</p>
+</div>
+
+<div id="modal1" class="modal">
+<div class="modal-conteudo">
+<span class="fechar" onclick="fecharModal('modal1')">&times;</span>
+<div class="texto">
+<h2>Pérola</h2>
+<p>Designada como Pérola da Diamante Rosa, ela serviu, admirou e amou sua diamante mesmo quando livre. Foi a primeira Crystal Gem junto de Rose Quartz, ajudando na rebelião e no falso estilhaçamento da Diamante Rosa, no qual se transformou em Rose Quartz para realizá-lo. Pouco antes disso, recebeu sua última ordem: nunca contar a verdade.</p>
+</div>
+</div>
+</div>
+
+<div class="Card" onclick="abrirModal('modal2')">
+<h3>Garnet</h3>
+<img src="https://i.redd.it/what-do-u-think-a-convo-between-our-garnet-and-single-gem-v0-q9v4v4mx2y4c1.jpg" alt="foto">
+<p>Feita de amor</p>
+</div>
+
+<div id="modal2" class="modal">
+<div class="modal-conteudo">
+<span class="fechar" onclick="fecharModal('modal2')">&times;</span>
+<div class="texto">
+<h2>Garnet</h2>
+<p>Fusão ilegal fruto do amor entre uma Rubi e uma Safira. Garnet é uma das primeiras Crystal Gems.</p>
+</div>
+</div>
+</div>
+
+<script>
+function abrirModal(id) {
+document.getElementById(id).style.display = "block";
+}
+
+function fecharModal(id) {
+document.getElementById(id).style.display = "none";
+}
+</script>
+
+</body>
+</html>
